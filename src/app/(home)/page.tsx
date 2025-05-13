@@ -1,11 +1,11 @@
 'use client'
 
 import { Card } from "@/components/ui/card";
+import { scrollToSection } from "@/lib/utils";
 import Image from "next/image";
-import { useRouter } from 'next/navigation'
+
 
 export default function Home() {
-  const router = useRouter();
   return (
     <div className="flex flex-col w-dvw min-h-dvh">
       <div
@@ -36,73 +36,77 @@ export default function Home() {
           Nossos Serviços
         </h2>
         <div className="flex ">
-          <Card className="w-96 h-96 m-4 cursor-pointer" onClick={() => router.push("#security")}>
+          <Card className="w-96 h-96 m-4 cursor-pointer" onClick={() => scrollToSection("security")}>
             <div className="flex flex-col items-center justify-center w-full h-full">
               <Image
-                src="/veritas-logo.png"
+                src="/veritas-security-logo.png"
                 alt="Veritas Logo Segurança"
                 width={256}
                 height={256}
                 className="w-64 h-64" />
 
-              <p className="mt-4 text-lg text-center text-gray-700 dark:text-gray-300">
+              <p className="mt-4 text-lg text-center text-gray-700 font-bold dark:text-gray-300">
                 Segurança Patrimonial
               </p>
             </div>
           </Card>
-          <Card className="w-96 h-96 m-4 cursor-pointer" onClick={() => router.push("#facilities")}>
+          <Card className="w-96 h-96 m-4 cursor-pointer" onClick={() => scrollToSection("facilities")}>
             <div className="flex flex-col items-center justify-center w-full h-full">
               <Image
-                src="/veritas-logo.png"
+                src="/veritas-facilities-logo.png"
                 width={256}
                 height={256}
                 alt="Veritas Logo Facilidades"
                 className="w-64 h-64" />
 
-              <p className="mt-4 text-lg text-center text-gray-700 dark:text-gray-300">
+              <p className="mt-4 text-lg text-center text-gray-700 font-bold dark:text-gray-300">
                 Facilities
               </p>
             </div>
           </Card>
         </div>
 
-        <div id="security" className="flex flex-col items-center w-full mt-16">
-          <h3 className="text-3xl font-semibold text-center text-gray-900 dark:text-gray-100">
-            Segurança Patrimonial
-          </h3>
-          <p className="mt-4 text-lg text-center text-gray-700 dark:text-gray-300 max-w-4xl">
-            Nossa empresa oferece serviços de segurança patrimonial de alta qualidade,
-            garantindo a proteção de bens, instalações e pessoas. Contamos com uma equipe
-            altamente treinada e tecnologias avançadas para proporcionar tranquilidade e
-            confiança aos nossos clientes. Seja para empresas, condomínios ou eventos,
-            estamos prontos para atender às suas necessidades com excelência.
-          </p>
+        <div id="security" className="flex items-center w-full mt-16">
+          <div className="flex flex-col items-center justify-center w-full">
+            <h3 className="text-3xl font-semibold text-center text-gray-900 dark:text-gray-100">
+              Segurança Patrimonial
+            </h3>
+            <p className="mt-4 text-lg text-center text-gray-700 dark:text-gray-300 max-w-4xl">
+              Nossa empresa oferece serviços de segurança patrimonial de alta qualidade,
+              garantindo a proteção de bens, instalações e pessoas. Contamos com uma equipe
+              altamente treinada e tecnologias avançadas para proporcionar tranquilidade e
+              confiança aos nossos clientes. Seja para empresas, condomínios ou eventos,
+              estamos prontos para atender às suas necessidades com excelência.
+            </p>
+          </div>
           <Image
-            src="/veritas-logo.png"
-            alt="Serviço de Segurança"
-            width={400}
-            height={200}
-            className="mt-8 rounded-lg shadow-lg"
+            src="/security-image.png"
+            alt="Seguranca patrimonial"
+            width={1440}
+            height={1200}
+            className="w-[500px]"
           />
         </div>
 
-        <div id="facilities" className="flex flex-col items-center w-full mt-16">
-          <h3 className="text-3xl font-semibold text-center text-gray-900 dark:text-gray-100">
-            Facilities
-          </h3>
-          <p className="mt-4 text-lg text-center text-gray-700 dark:text-gray-300 max-w-4xl">
-            Oferecemos soluções completas de facilities para atender às demandas de sua empresa.
-            Nossos serviços incluem limpeza, manutenção, recepção e suporte operacional,
-            garantindo um ambiente funcional e organizado. Com uma equipe qualificada e
-            comprometida, proporcionamos eficiência e qualidade para o seu negócio.
-          </p>
+        <div id="facilities" className="flex items-center w-full mt-16">
           <Image
-            src="/veritas-logo.png"
-            alt="Serviço de Facilities"
-            width={400}
-            height={200}
-            className="mt-8 rounded-lg shadow-lg"
+            src="/facilities-image.png"
+            alt="Seguranca patrimonial"
+            width={1440}
+            height={1051}
+            className="w-[500px]"
           />
+          <div className="flex flex-col items-center justify-center w-full">
+            <h3 className="text-3xl font-semibold text-center text-gray-900 dark:text-gray-100">
+              Facilities
+            </h3>
+            <p className="mt-4 text-lg text-center text-gray-700 dark:text-gray-300 max-w-4xl">
+              Oferecemos soluções completas de facilities para atender às demandas de sua empresa.
+              Nossos serviços incluem limpeza, manutenção, recepção e suporte operacional,
+              garantindo um ambiente funcional e organizado. Com uma equipe qualificada e
+              comprometida, proporcionamos eficiência e qualidade para o seu negócio.
+            </p>
+          </div>
         </div>
 
       </div>
