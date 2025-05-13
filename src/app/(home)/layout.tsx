@@ -5,8 +5,12 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div className="flex flex-col w-full min-h-screen">
       <NavigationBar />
-      {children}
-      <Footer />
+      <div className="flex flex-col w-full h-[calc(100vh-96px)] overflow-scroll">
+        <div>
+          {children}
+        </div>
+        <Footer />
+      </div>
     </div>
   );
 }
