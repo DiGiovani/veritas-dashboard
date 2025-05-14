@@ -1,5 +1,6 @@
 "use client";
 
+import { ContactForm } from "@/components/contact-form";
 import { Card } from "@/components/ui/card";
 import { scrollToSection } from "@/lib/utils";
 import Image from "next/image";
@@ -23,7 +24,7 @@ export default function Home() {
             background: "rgba(0,0,0,0.25)",
           }}
         >
-          <h1 className="text-7xl font-bold text-center text-gray-900 dark:text-gray-100 text-sans">
+          <h1 className="text-5xl md:text-7xl font-bold text-center text-gray-900 dark:text-gray-100 text-sans">
             A verdade na proteção.
             <br />A força na entrega.
           </h1>
@@ -80,11 +81,11 @@ export default function Home() {
           id="security"
           className="flex flex-col-reverse gap-8 px-2 md:flex-row items-center w-full mt-16"
         >
-          <div className="flex flex-col items-center justify-center w-full">
-            <h3 className="text-3xl font-semibold text-center text-gray-900 dark:text-gray-100">
+          <div className="flex flex-col items-center md:items-start justify-center w-full">
+            <h3 className="text-3xl font-semibold text-center md:text-start text-gray-900 dark:text-gray-100">
               Segurança Patrimonial
             </h3>
-            <p className="mt-4 text-lg text-center text-gray-700 dark:text-gray-300 max-w-4xl">
+            <p className="mt-4 text-lg text-center md:text-start text-gray-700 dark:text-gray-300 max-w-4xl">
               Nossa empresa oferece serviços de segurança patrimonial de alta
               qualidade, garantindo a proteção de bens, instalações e pessoas.
               Contamos com uma equipe altamente treinada e tecnologias avançadas
@@ -113,11 +114,11 @@ export default function Home() {
             height={1051}
             className="w-[500px]"
           />
-          <div className="flex flex-col items-center justify-center w-full">
-            <h3 className="text-3xl font-semibold text-center text-gray-900 dark:text-gray-100">
+          <div className="flex flex-col items-center md:items-end justify-center w-full">
+            <h3 className="text-3xl font-semibold text-center md:text-right text-gray-900 dark:text-gray-100">
               Facilities
             </h3>
-            <p className="mt-4 text-lg text-center text-gray-700 dark:text-gray-300 max-w-4xl">
+            <p className="mt-4 text-lg text-center md:text-right text-gray-700 dark:text-gray-300 max-w-4xl">
               Oferecemos soluções completas de facilities para atender às
               demandas de sua empresa. Nossos serviços incluem limpeza,
               manutenção, recepção e suporte operacional, garantindo um ambiente
@@ -143,6 +144,16 @@ export default function Home() {
             no mercado.
           </p>
         </div>
+      </div>
+
+      <div
+        id="contact"
+        className="w-full flex flex-col items-center justify-center mb-8"
+      >
+        <h2 className="text-4xl font-bold text-center text-gray-900 dark:text-gray-100 text-sans my-8">
+          Contato
+        </h2>
+        <ContactForm />
       </div>
     </div>
   );
