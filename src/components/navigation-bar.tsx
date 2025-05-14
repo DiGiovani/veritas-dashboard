@@ -1,5 +1,9 @@
+"use client";
+
+import { useIsMobile } from "@/hooks/use-mobile";
 import Image from "next/image";
 import Link from "next/link";
+import { SidebarTrigger } from "./ui/sidebar";
 
 const items = [
   {
@@ -21,8 +25,14 @@ const items = [
 ];
 
 export function NavigationBar() {
+  const isMobile = useIsMobile();
+
+  if (isMobile) {
+    return <MobileNavigationBar />;
+  }
+
   return (
-    <nav className="flex items-center justify-between py-0 text-lg px-64">
+    <nav className="flex items-center justify-between py-0 text-lg px-64 min-h-20">
       <Image
         src="/veritas-logo.png"
         width={96}
@@ -36,6 +46,20 @@ export function NavigationBar() {
           </Link>
         ))}
       </div>
+    </nav>
+  );
+}
+
+export function MobileNavigationBar() {
+  return (
+    <nav className="flex items-center justify-center py-0 text-lg  min-h-20">
+      <Image
+        src="/veritas-logo.png"
+        width={64}
+        height={64}
+        alt="Logo Veritas"
+      />
+      <SidebarTrigger className="absolute right-4" />
     </nav>
   );
 }
