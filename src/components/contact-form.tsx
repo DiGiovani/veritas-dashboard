@@ -175,7 +175,7 @@ export function ContactForm() {
             name="state"
             render={({ field }) => (
               <FormItem className="w-full">
-                <FormLabel>Telefone</FormLabel>
+                <FormLabel>Estado</FormLabel>
                 <FormControl>
                   <Input placeholder="Estado" {...field} />
                 </FormControl>
