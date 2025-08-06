@@ -1,6 +1,6 @@
 "use server";
 
-import { contactFormSchema } from "@/components/contact-form";
+import { contactFormSchema } from "@/components/forms/contact-form";
 import { z } from "zod";
 
 import nodemailer from "nodemailer";
@@ -39,8 +39,8 @@ export async function sendContact(values: z.infer<typeof contactFormSchema>) {
 
   const mailOptions = {
     from: SITE_MAIL_RECEIVER,
-    to: values.email,
-    subject: `Confirmação de contato ${values.name}`,
+    to: SITE_MAIL_RECEIVER,
+    subject: `Contato LP - ${values.name}`,
     html: `
       <p><strong>Nome:</strong> ${values.name}</p>
       <p><strong>Empresa:</strong> ${values.company}</p>

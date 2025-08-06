@@ -25,9 +25,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br" suppressHydrationWarning>
-      <head>
-        <link rel="icon" href="/veritas.ico" sizes="256x256" />
-      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

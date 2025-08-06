@@ -1,6 +1,6 @@
 "use client";
 
-import { ContactForm } from "@/components/contact-form";
+import { ContactForm } from "@/components/forms/contact-form";
 import { Card } from "@/components/ui/card";
 import { scrollToSection } from "@/lib/utils";
 import Image from "next/image";
@@ -135,13 +135,19 @@ export default function Home() {
             Sobre nós
           </h2>
           <p className="mt-4 text-lg text-center text-gray-700 dark:text-gray-300 max-w-4xl">
-            A Veritas é uma empresa de segurança e serviços, focada em soluções
-            em tecnologia para a segurança da informação. Com uma equipe
-            altamente qualificada e comprometida, oferecemos serviços
-            personalizados para atender às necessidades de nossos clientes.
-            Nossa missão é garantir a proteção e a tranquilidade de nossos
-            clientes, utilizando as melhores práticas e tecnologias disponíveis
-            no mercado.
+            O Grupo Veritas é uma empresa especializada em segurança patrimonial
+            e serviços de facilities, com atuação pautada pela excelência
+            operacional e pelo uso de tecnologias de ponta. Nosso compromisso é
+            oferecer soluções personalizadas, desenvolvidas a partir de um
+            rigoroso padrão de qualidade e da expertise de uma equipe altamente
+            capacitada e comprometida.
+          </p>
+          <p className="mt-4 text-lg text-center text-gray-700 dark:text-gray-300 max-w-4xl">
+            Mais do que prestar serviços, nossa missão é proteger, apoiar e
+            gerar tranquilidade para nossos clientes, com base nas melhores
+            práticas do setor, em inovação constante e no valor que dá nome à
+            nossa marca: Veritas, a verdade — princípio que orienta cada ação
+            com transparência, integridade e foco em resultados concretos.
           </p>
         </div>
       </div>

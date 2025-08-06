@@ -12,15 +12,19 @@ const items = [
   },
   {
     label: "Serviços",
-    href: "#services",
+    href: "/#services",
   },
   {
     label: "Sobre nós",
-    href: "#about",
+    href: "/#about",
   },
   {
     label: "Contato",
-    href: "#contact",
+    href: "/#contact",
+  },
+  {
+    label: "Trabalhe Conosco",
+    href: "trabalhe-conosco",
   },
 ];
 
@@ -32,11 +36,11 @@ export function NavigationBar() {
   }
 
   return (
-    <nav className="flex items-center justify-between py-0 text-lg px-64 min-h-20">
+    <nav className="flex items-center justify-between py-2 text-lg px-64 min-h-20">
       <Image
         src="/veritas-logo.png"
-        width={96}
-        height={96}
+        width={128}
+        height={128}
         alt="Logo Veritas"
       />
       <div className="flex gap-8">
