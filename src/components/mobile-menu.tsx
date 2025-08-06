@@ -20,16 +20,21 @@ const items = [
   },
   {
     title: "Serviços",
-    url: "#services",
+    url: "/#services",
   },
   {
     title: "Sobre nós",
-    url: "#about",
+    url: "/#about",
   },
   {
     title: "Contato",
-    url: "#contact",
+    url: "/#contact",
   },
+  {
+    title: "Trabalhe conosco",
+    url: "/trabalhe-conosco",
+  },
+  
 ];
 
 export function MobileMenu() {
