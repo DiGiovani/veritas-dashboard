@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export function Footer() {
   return (
     <footer className="flex items-center justify-center py-8 bg-[#20202027] text-white">
@@ -8,19 +10,41 @@ export function Footer() {
             <h3 className="text-lg font-bold mb-4">Links</h3>
             <ul className="text-sm space-y-2">
               <li>
-                <a href="#about" className="text-blue-400 hover:underline">
+                <Link href="/#about" className="text-blue-400 hover:underline">
                   Sobre
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#services" className="text-blue-400 hover:underline">
+                <Link
+                  href="/#services"
+                  className="text-blue-400 hover:underline"
+                >
                   Serviços
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#contact" className="text-blue-400 hover:underline">
+                <Link
+                  href="/#contact"
+                  className="text-blue-400 hover:underline"
+                >
                   Contato
-                </a>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/#contact"
+                  className="text-blue-400 hover:underline"
+                >
+                  Contato
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/trabalhe-conosco"
+                  className="text-blue-400 hover:underline"
+                >
+                  Trabalhe conosco
+                </Link>
               </li>
             </ul>
           </div>
