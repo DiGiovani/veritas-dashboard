@@ -32,14 +32,6 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="/#contact"
-                  className="text-blue-400 hover:underline"
-                >
-                  Contato
-                </Link>
-              </li>
-              <li>
-                <Link
                   href="/trabalhe-conosco"
                   className="text-blue-400 hover:underline"
                 >
