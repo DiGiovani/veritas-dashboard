@@ -208,9 +208,13 @@ export function ContactForm() {
           name="message"
           render={({ field }) => (
             <FormItem className="w-full">
-              <FormLabel>Ramo de Atividade</FormLabel>
+              <FormLabel>Mensagem</FormLabel>
               <FormControl>
-                <Textarea placeholder="Atividade" {...field} />
+                <Textarea
+                  className="min-h-36"
+                  placeholder="Mensagem"
+                  {...field}
+                />
               </FormControl>
               <FormDescription>
                 [{field.value?.length || 0}/500] Descreva brevemente os detalhes
@@ -220,7 +224,7 @@ export function ContactForm() {
             </FormItem>
           )}
         />
-        <Button type="submit" className="dark:text-white">
+        <Button type="submit" className="dark:text-white cursor-pointer">
           {isLoading ? (
             <>
               <Loader2 className="mr-2 h-4 w-4 animate-spin" />
